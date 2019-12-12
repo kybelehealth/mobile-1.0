@@ -1,0 +1,17 @@
+<ion-header mode="ios">
+  <ion-navbar transparent mode="ios">
+    <ion-title mode="ios">Bildirimler </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngIf="!isLoading">
+    <ion-item *ngFor="let item of dataList; let orderNo = index;" (click)="openDetail(item)">
+      <span class="number {{item.IsRead ? '':'unread'}}"></span>
+      <h2>{{item.Date}}</h2>
+      <p>{{item.Message }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

@@ -1,0 +1,227 @@
+<ion-header mode="ios">
+    <ion-navbar transparent mode="ios">
+      <ion-title mode="ios"></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div wizard-content>
+       
+        <h5>Adı ve Soyadı</h5>
+        <ion-row>
+          <ion-col ion-item no-margin>
+              <ion-input type="text" value=""></ion-input>
+          </ion-col>            
+        </ion-row> 
+
+        <h5>Cinsiyeti</h5>
+        <ion-list radio-group no-lines>
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Kadın</ion-label>
+                  <ion-radio [value]="false"></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Erkek</ion-label>
+                  <ion-radio [value]="true"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5>Çocuğunuzun geçici kimlik numarası var mı?</h5>
+        <ion-list radio-group no-lines [(ngModel)]="check1">
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Hayır</ion-label>
+                  <ion-radio [value]="false" (ionSelect)="radioChecked(false,check1)"></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Evet</ion-label>
+                  <ion-radio [value]="true" (ionSelect)="radioChecked(true,check1)"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5 *ngIf="check1">Çocuğunuzun geçici kimlik numarası</h5>
+        <ion-row *ngIf="check1">
+          <ion-col ion-item no-margin>
+              <ion-input type="tel" (ionBlur)="checkIdentity($event)" [(ngModel)]="identityNumber" [brmasker]="{mask:'99999999999', len:11, type:'num'}"></ion-input>
+          </ion-col>            
+        </ion-row> 
+
+        <h5>Çocuğunuzun için herhangi bir dernekten yardım alıyor musunuz?</h5>
+        <ion-list radio-group no-lines [(ngModel)]="check2">
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Hayır</ion-label>
+                  <ion-radio [value]="true" (ionSelect)="radioChecked(false,check2)"></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Evet</ion-label>
+                  <ion-radio [value]="false" (ionSelect)="radioChecked(true,check2)"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5 *ngIf="check2">Çocuğunuzun için herhangi bir dernekten yardım almak ister misiniz?</h5>
+        <ion-list radio-group no-lines *ngIf="check2">
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Hayır</ion-label>
+                  <ion-radio [value]="false"></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Evet</ion-label>
+                  <ion-radio [value]="true"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5>Bilinen bir hastalığı var mı?</h5>
+        <ion-list radio-group no-lines [(ngModel)]="check3">
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Hayır</ion-label>
+                  <ion-radio [value]="false" (ionSelect)="radioChecked(false,check3)"></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Evet</ion-label>
+                  <ion-radio [value]="true" (ionSelect)="radioChecked(true,check3)"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5 *ngIf="check3">Varsa hastalığı nedir?</h5>
+        <ion-select *ngIf="check3" interface="action-sheet" [(ngModel)]="check4" (ionChange)="radioChecked(true,check4)" [multiple]="true">
+            <ion-option>Astım</ion-option>
+            <ion-option>Diyabet</ion-option>
+            <ion-option>Kistik fibrozis</ion-option>
+            <ion-option>Gelişim geriliği</ion-option>
+            <ion-option>Serebral palsi (Spastik çocuk)</ion-option>
+            <ion-option>Kanser</ion-option>
+            <ion-option>Kalp hastalığı</ion-option>
+            <ion-option>Anemi (Kansızlık)</ion-option>
+            <ion-option>Diğer hastalıklar</ion-option>
+        </ion-select>
+
+        <small *ngIf="check4">Aşağıdaki bölüme hastalığın adını yazınız</small>
+        <ion-row *ngIf="check4">
+        <ion-col ion-item no-margin>
+            <ion-input type="text"></ion-input>
+        </ion-col>            
+        </ion-row> 
+
+        <h5>Kullandığı ilaçlar var mı?</h5>
+        <ion-list radio-group no-lines [(ngModel)]="check5">
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Hayır</ion-label>
+                  <ion-radio [value]="false" (ionSelect)="radioChecked(false,check5)"></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Evet</ion-label>
+                  <ion-radio [value]="true" (ionSelect)="radioChecked(true,check5)"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5 *ngIf="check5">Varsa ne ilacı olduğunu seçiniz</h5>
+        <ion-select *ngIf="check5" interface="action-sheet" [(ngModel)]="check6" (ionChange)="radioChecked(true,check6)" [multiple]="true">
+            <ion-option>Astım ilaçları</ion-option>
+            <ion-option>Anemi için ilaç (Kansızlık ilacı)</ion-option>
+            <ion-option>Diyabet ilaçları</ion-option>
+            <ion-option>Diğer ilaçlar</ion-option>
+        </ion-select>
+
+        <small *ngIf="check6">Aşağıdaki bölüme ilacın adını yazınız</small>
+        <ion-row *ngIf="check6">
+        <ion-col ion-item no-margin>
+            <ion-input type="text"></ion-input>
+        </ion-col>            
+        </ion-row> 
+
+
+        <h5>Doğum Tarihi</h5>
+        <ion-row>
+          <ion-col ion-item no-margin>
+              <ion-datetime placeholder="Tarih seçiniz" class="no-pl inputtitle" displayFormat="DD/MM/YYYY"
+              pickerFormat="DD/MM/YYYY" cancelText="Vazgeç" doneText="Tamam"></ion-datetime>
+          </ion-col>
+            
+        </ion-row>
+
+
+        <h5>Doğum Yeri (Şehir olarak yazınız)</h5>
+        <ion-row>
+          <ion-col ion-item no-margin>
+                <ion-input type="text"></ion-input>
+          </ion-col>
+        </ion-row>
+
+
+        <h5>Çocuğunuzun doğumu nasıl oldu?</h5>
+        <ion-list radio-group no-lines [(ngModel)]="check7">
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Normal</ion-label>
+                  <ion-radio [value]="true" checked></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Sezeryan</ion-label>
+                  <ion-radio [value]="false"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5>Çocuğunuz kaç haftalık doğdu?</h5>
+        <ion-row>
+          <ion-col ion-item no-margin>
+                <ion-input type="text"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <h5>Çocuğunuz kaç gram doğdu?</h5>
+        <ion-row>
+          <ion-col ion-item no-margin>
+                <ion-input type="text"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <h5>Çocuğunuzu düzenli olarak aylık kontrollere götürüyor musunuz?</h5>
+        <ion-list radio-group no-lines [(ngModel)]="check8">
+            <ion-row>
+              <ion-col ion-item>
+                  <ion-label>Evet</ion-label>
+                  <ion-radio [value]="true" checked></ion-radio>
+              </ion-col>
+              <ion-col ion-item>
+                  <ion-label>Hayır</ion-label>
+                  <ion-radio [value]="false"></ion-radio>
+                </ion-col>
+            </ion-row>
+        </ion-list>
+
+        <h5>Çocuğunuzu en son kontrole götürdüğünüzde çocuğunuz kaç aylıktı?</h5>
+        <ion-row>
+          <ion-col ion-item no-margin>
+                <ion-input type="text"></ion-input>
+          </ion-col>
+        </ion-row>
+
+        <h5>Aşağıda yer alan aşılardan çocuğunuza yapılanları işaretleyiniz. Varsa aşı kartına bakarak işaretleme yapınız.</h5>
+        <ion-select interface="action-sheet" [(ngModel)]="check9" (ionChange)="radioChecked(true,check9)" [multiple]="true">
+            <ion-option>Hepatit B (Sarılık)</ion-option>
+            <ion-option>BCG (Verem)</ion-option>
+            <ion-option>Beşli Karma Aşı (DaBT-IPA-Hib) (Boğmaca, Difteri, Tetanoz, Çocuk Felci, Influenza aşısı)</ion-option>
+            <ion-option>KPA (Pnömokok aşısı)</ion-option>
+            <ion-option>KKK (Kabakulak, kızamık, kızamıkçık aşısı)</ion-option>
+            <ion-option>OPA (Ağızdan çocuk felci aşısı)</ion-option>
+            <ion-option>Hepatit A (Sarılık)</ion-option>
+            <ion-option>Su Çiçeği</ion-option>
+            <ion-option>Bilmiyorum</ion-option>
+        </ion-select>
+
+        <button navPop ion-button block color="pink">Ekle</button>
+
+    </div>
+</ion-content>

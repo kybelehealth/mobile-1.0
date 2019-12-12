@@ -1,0 +1,79 @@
+<ion-header mode="ios">
+
+  <ion-navbar mode="ios" transparent>
+    <ion-buttons left>
+            <button navPop ion-button icon-only>
+                <ion-icon name="ios-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+    <ion-title mode="ios">Şifremi Unuttum</ion-title>
+    <ion-buttons end> 
+      
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ng-container *ngIf="!resend">
+      <ion-row>
+          <ion-col>
+            <p>
+            E-posta adresinizi giriniz
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-8>
+              <ion-input type="number" value="" class="classic"></ion-input>
+          </ion-col>
+          <ion-col col-4>
+              <button (click)="resendCode()" ion-button color="primary">Gönder</button>
+          </ion-col>
+        </ion-row>
+  </ng-container>
+  <ng-container *ngIf="resend && !isenabled">
+      <ion-row>
+          <ion-col>
+            <p class="info">
+           
+            </p>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-8>
+              <ion-input type="number" value="" class="classic"></ion-input>
+          </ion-col>
+          <ion-col col-4>
+              <button (click)="resendCode()" ion-button color="primary">Tekrar Gönder</button>
+          </ion-col>
+        </ion-row>
+  </ng-container>
+  <ng-container *ngIf="isenabled && !changepass">
+      <ion-list inset lines>
+          <ion-item>
+              <ion-label floating>Şifreniz</ion-label>
+              <ion-input [type]="passwordType" clearOnEdit="false"></ion-input>
+              <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+          </ion-item>
+          <ion-item>
+              <ion-label floating>Şifrenizin Tekrarı</ion-label>
+              <ion-input [type]="passwordType" clearOnEdit="false"></ion-input>
+              <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+          </ion-item>
+          <ion-item></ion-item>
+      </ion-list>
+  </ng-container>
+  <ng-container *ngIf="changepass">
+    <img src="assets/imgs/Successfully.svg" class="successfully">
+    <h2 class="h2-successfully">Şifre değişikliğiniz <br>gerçekleştirildi!</h2>
+  </ng-container>
+
+
+</ion-content>
+<ion-footer padding>
+    <button [disabled]="!isenabled" *ngIf="!changepass" (click)="changePass()" ion-button block color="primary">Şifremi Değiştir</button>
+    <button *ngIf="changepass" (click)="gotoLogin()" ion-button block color="primary">Giriş Yap</button>
+</ion-footer>

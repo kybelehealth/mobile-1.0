@@ -1,0 +1,34 @@
+<ion-header mode="ios">
+  <ion-navbar transparent mode="ios">
+    <ion-title mode="ios"> {{translation.lblHeader}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!isLoading">
+      <ion-row *ngFor="let item of dataList">
+          <ion-col>
+            <ion-card>
+              <img [src]="item.Photo" />
+              <ion-card-content>
+                <ion-card-title>
+                  {{item.Name}}
+                </ion-card-title>
+                <p>
+                  <ion-icon name="md-calendar"></ion-icon>
+                  {{item.Date}}
+                </p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+  </div>
+  
+
+</ion-content>
+<ion-footer padding>
+  <button ion-button color="secondary" block (click)="call()">
+    {{translation.btnReportUpload}}
+  </button>
+</ion-footer>

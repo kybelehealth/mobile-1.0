@@ -1,0 +1,13 @@
+<ion-header mode="ios">
+    <ion-navbar transparent mode="ios">
+      <ion-title mode="ios">{{blogItem.Title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <img [src]="blogItem.Picture" class="cover">
+
+    <h2>{{blogItem.Abstract}}</h2>
+    <div [innerHTML]="blogItem.Content"></div>
+
+</ion-content>

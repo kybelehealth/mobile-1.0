@@ -1,0 +1,46 @@
+<ion-content padding>
+  <div class="logo">
+    <img src="assets/imgs/hera-logo-h-i.png">
+  </div>
+
+  <form [formGroup]="frmLogin" no-lines>
+    <ion-item>
+        <ion-label  mode="ios" color="white" floating>{{translation.lblLanguage}}</ion-label>      
+        <ion-select cancelText="{{translation.lblCancel}}" okText="{{translation.lblSelect}}" formControlName="language" (ionChange)="change($event)">
+          <ion-option [value]="tr">Türkçe</ion-option>
+          <ion-option [value]="ar">العربية</ion-option>
+          <ion-option [value]="en">English</ion-option>
+        </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label  mode="ios" color="white" floating>{{translation.lblPhoneNumber}}</ion-label>
+      <ion-input mode="ios" formControlName="mobile" type="tel" [brmasker]="{mask:'9 (999) 999-99-99', len:17, type:'num'}" required></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="!frmLogin.get('mobile').valid && (frmLogin.get('mobile').dirty || frmLogin.get('mobile').touched)"> 
+        <div *ngIf="frmLogin.controls.mobile.hasError('required')"> {{translation.errMobilePhone}} </div>      
+        <div *ngIf="frmLogin.controls.mobile.hasError('minlength')"> {{translation.errMobilePhone}} </div>
+        <div *ngIf="frmLogin.controls.mobile.hasError('maxlength')"> {{translation.errMobilePhone}} </div>
+    </div>
+    <ion-item>
+      <ion-label mode="ios" color="white" floating>{{translation.lblPassword}}</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+    <div class="error-message" *ngIf="!frmLogin.get('password').valid && (frmLogin.get('password').dirty || frmLogin.get('password').touched)"> 
+        <div *ngIf="frmLogin.controls.password.hasError('required')"> {{translation.errPassword}} </div>  
+        <div *ngIf="frmLogin.controls.password.hasError('minlength')"> {{translation.errPasswordLength}} </div>    
+    </div>    
+  </form>
+
+  <ion-list no-lines>    
+    <ion-item>
+      <!-- <button clear ion-button class="vergessen" (click)="gotoPassword()">
+        {{translation.btnForgotPassword}}
+      </button> -->
+    </ion-item>
+  </ion-list>
+  <button ion-button block (click)="login()" [disabled]="!frmLogin.valid" class="onboarding-button">{{translation.btnLogin}}</button>
+  <ion-label class="oder" text-center>
+    - {{translation.lblOr}} -
+  </ion-label>
+  <button ion-button block (click)="gotoRegister()" color="light">{{translation.btnRegister}}</button>  
+</ion-content>

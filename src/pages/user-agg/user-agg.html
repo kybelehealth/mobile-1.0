@@ -1,0 +1,465 @@
+<br>
+<ion-header mode="ios">
+  <ion-navbar transparent mode="ios">
+    <ion-buttons left *ngIf="onlyShow">
+      <button navPop ion-button icon-only>
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title mode="ios">{{translation.lblHeader}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf="lang=='tr'">
+    <strong>1. Taraflar</strong><br>
+    <strong>1.1.</strong> İşbu kullanıcı sözleşmesi Esentepe Mah. Füsun Sok. Sivil Savunma Müd. Kartal Sit. No:4 Kartal
+    İstanbul adresinde mukim Medikal Arama Kurtarma Derneği (MEDAK) (Uygulama Sahibi) ile HERA mobil uygulamasına kayıt
+    olan kişi (Kullanıcı) arasında düzenlenmiş olup sözleşme dahilinde uygulamadan yararlanan kullanıcının üyelik
+    kaydını tamamladığında ve bu anlaşmayı okuyup anladığını ve kabul ettiğini elektronik ortamda onaylaması anında
+    akdedilmiş ve karşılıklı olarak yürürlüğe girmiştir.<br>
+    <strong>2. Sözleşmenin Konusu</strong><br>
+    <strong>2.1</strong> İşbu sözleşmenin konusu, Grand Challenges Canada-Bold Ideas with Big Impact® fonu tarafından
+    desteklenen, Petrol Sitesi Yolu Sok. Petrol Sitesi 8. Blok D:8 Nispetiye Beşiktaş İstanbul adresinde mukim W AJANS
+    YAZILIM VE REKLAM LTD. ŞTİ. Tarafından geliştirilen, Medikal Arama Kurtarma Derneği (MEDAK)’a ait olan HERA mobil
+    uygulamasında sunulan hizmetlerin, bu hizmetlerden yararlanma şartlarının, tarafların karşılıklı hak ve
+    yükümlülüklerinin tespitidir.<br>
+    <strong>3. Tanımlar</strong><br>
+    <strong>3.1 Mobil uygulama:</strong>
+    Söz konusu mobil uygulamanın ismi ‘HERA (Health Recording Application)’ olup HERA isimli mobil uygulama, tüm mobil
+    cihazlarda çalışan mobil uygulama yazılımını ve bu yazılım ile bağlantılı olarak sunulan hizmetleri ifade
+    etmektedir. HERA, Türkiye’deki Suriyeli mülteci kadınlarda doğum öncesi bakım artışı ve çocuklarda aşılanma artışı
+    için geliştirilmiş bir mobil sağlık uygulamasıdır. <br>
+    <strong>3.2 Üye/Kullanıcı:</strong>
+    Mobil uygulamaya işbu sözleşmede belirlenen yol ve yöntemlerle kayıt olup, mobil uygulama tarafından sunulan
+    hizmetlerden işbu sözleşmede belirtilen koşullar dahilinde yararlanan tüm kişileri ifade etmektedir.<br>
+    <strong>3.3 Uygulamaya erişim araçları:</strong> Kullanıcının hesabını yönetim sayfası, uygulamaya erişim sağlayan
+    kullanıcı adı, şifre gibi yalnızca kullanıcının bilgisinde olan bilgilerdir.<br>
+    <strong>3.4 Hizmetler:</strong> Sözleşmenin 4. maddesinde yer alan, kullanıcıların HERA uygulaması sayesinde
+    yararlanacağı tüm işlemleri ifade etmektedir.<br>
+    <strong>3.5 İletişim kanalları: </strong>
+    Uygulama ile anında bildirim iletişim mecrasını ifade etmektedir.<br>
+    <strong>3.6 Kişisel bilgiler/gizli bilgiler:</strong> <br>
+    Kişi adı, soyadı, adres, telefon numarası, e-posta adresi, uygulama ile verilen hizmeti gerçekleştirebilmek için
+    kullanıcıya sağlığıyla ilgili sorulan soruların cevapları, kullanıcının kendi iradesi ile uygulamaya ekleyebileceği
+    sağlık raporlarının fotoğrafları, kullanıcıyı tanımlamaya yönelik her türlü yazı ve görsel işaret ve bilgiyi ifade
+    etmektedir. <br>
+    <strong>4. Hak ve Yükümlülükler</strong><br>
+    <strong>4.1 Medikal Arama ve Kurtarma Derneği’nin Hak ve Yükümlülükleri</strong><br>
+    <strong>4.1.1</strong> Medikal Arama ve Kurtarma Derneği, HERA üzerinden kullanıcının talebi üzerine taahhüt ettiği
+    hizmetleri sağlayacaktır. HERA’nın taahhüt ettiği hizmetler; Türkiye’de yaşayan Suriyeli mülteci kadınların doğum
+    öncesi bakım hizmetlerini geliştirmek amacıyla söz konusu kişilerin kontrol tarihlerinden önce uygulama ile anında
+    bildirim gönderilmesi, Türkiye’de yaşayan Suriyeli mülteci kadınların 0-2 yaş arasındaki çocuklarının aşılanma
+    oranlarının artırılması amacıyla uygulama ile aşı zamanları öncesinde hatırlatma amaçlı anında bildirim göndermek,
+    hamilelik ve çocuklar ile ilgili sağlık bilgileri paylaşımı, söz konusu konularda tavsiyeler, kullanıcıların
+    elektronik sağlık kayıtlarını saklayabileceği bir platform sunmak ve istenildiğinde sadece kendi iradeleri ile bu
+    bilgileri görmelerini sağlamaktır. <br>
+    <strong>4.1.2</strong> Uygulama sahibinin sağladığı bilgiler ve sağlık konusundaki içerikleri sadece tavsiye
+    niteliğinde olup tanı veya tedavi amacı taşımamaktadır. Kullanıcı uygulamanın kullanımı ve paylaşılan tavsiyeler ile
+    ilgili oluşabilecek tıbbi, sosyal ve hukuki hiçbir konuda uygulama sahibini sorumlu gösteremez. Ayrıca uygulama
+    sahibi; uygulamanın 7 gün 24 saat kesintisiz olarak sunulmasını kullanıcılara garanti etmemekte ve bu konuda
+    herhangi bir hizmet ya da performans seviyesi taahüdü vermemektedir. Uygulamanın etkin biçimde kullanımı ve bu
+    kullanımın tüm sonuçları kullanıcının sorumluluğunda olup, MEDAK uygulamanın kendisinden beklenen sonuçlarının tam
+    olmaması ya da eksik veya amacına uygun olmamasından ve bu sebeplerle ortaya çıkabilecek doğrudan ve dolaylı
+    zararlardan hiçbir şekilde sorumlu değildir.<br>
+    <strong>4.1.3</strong> Uygulama sahibi, üçüncü kişilerin fiillerinden, mücbir sebeplerden, Türkiye Cumhuriyeti
+    Sağlık Bakanlığı tarafından 0-2 yaş arasındaki çocukluk aşılarının ücretsiz olarak yapılması için görevlendirdiği
+    sağlık hizmeti sağlayan kurumlar ve kuruluşlardan, söz konusu yerlerde çalışan sağlık personelinden kaynaklanan
+    sorunlardan, Türkiye Cumhuriyeti Sağlık Bakanlığı tarafından doğum öncesi bakım hizmetlerini ücretsiz olarak vermek
+    için görevlendirdiği sağlık hizmetleri sağlayan kurumlar ve kuruluşlardan, söz konusu yerlerde çalışan sağlık
+    personelinden kaynaklanan sorunlardan, internet kesintileri ve bağlantı sorunları vb. durumlar nedeniyle hizmet
+    alımında oluşabilecek kesinti ya da aksaklıklardan sorumlu değildir. <br>
+    <strong>4.1.4</strong> Uygulamaya üyelik ücretsizdir. Uygulamanın sağladığı hizmetin alımı ücretsizdir. Uygulama,
+    kişiye özel ve bireysel kullanım içindir. Kullanıcılar, uygulamaya kayıt aşamasında telefon numaraları ve şifre ile
+    uygulamaya erişebileceklerdir. Kullanıcıların kullanıcı adını ve şifresini üçüncü bir şahsa vermesi veya bu
+    bilgileri kaybetmesi ile oluşabilecek durumlardan uygulama sahibi sorumlu değildir<br>
+    <strong>4.1.5</strong> Uygulama sahibi, uygulamadaki kullanıcıların tüm bilgilerini yapacakları saha çalışmalarında
+    ve yazacakları bilimsel yazılarda kullanacaktır. Uygulama sahibi, söz konusu bilgileri uygulamaya maddi destek
+    sağlayan Grand Challenges Canada-Bold Ideas with Big Impact® fonu ile paylaşma hakkını saklı tutar. Kullanıcılar,
+    işbu sözleşmeyi okuyarak ve okuduğunu onaylayarak, tüm bilgilerinin uygulama sahibi ve Grand Challenges Canada-Bold
+    Ideas with Big Impact® fonu tarafından kullanılabileceğini kabul eder; uygulamayı kullanmayı bırakmadan, kullanıcı
+    hesabını silmeden, HERA mobil uygulamasının yer aldığı çalışmadan çıkmadığı sürece kullanıcı bilgi paylaşımı
+    konusunda herhangi bir hak iddia edemez. Söz konusu bilgi paylaşımı reklam veya ticari amaçlı değildir. Kullanıcı
+    HERA uygulamasının fikri ve Sinai haklarının MEDAK’a ait olduğunu ve uygulamada bulunan resimleri, metinleri, görsel
+    ve işitsel imgeleri, dosyaları veri tabanlarını, katalogları, tedavi süreçlerini anlatan bilgileri ve uygulamadaki
+    her türlü içeriği çoğaltmayacağını, kopyalamayacağını, dağıtmayacağını, işlemeyeceğini uygulama sahibinin haklarına,
+    malvarlığına tecavüz teşkil edecek hareketlerde bulunmayacağını Kabul ve taahüt etmektedir. Bu nedenle ortaya
+    çıkacak zararların tek muhatabı ve sorumlusu kullanıcı olacak ve bu tür taleplere karşı uygulama sahibininin
+    zararlarını derhal tazmin edecektir. <br>
+    <strong>4.1.6</strong> Kullanıcının mobil cihazı, uygulamanın indirilebilmesi ve güncellemelerinin yapılabilmesi
+    amacıyla, App Store veya Google Play Store uygulamalarına erişim için kullanıcının internete wifi ile bağlı olmasını
+    talep edebilir. App Store ve Google Play Store’un Genel Hüküm ve Koşulları mobil cihazın çeşidine ve App Store veya
+    Google Play Store kullanımına bağlı olarak uygulanacaktır. Uygulamanın her türlü hakkı MEDAK’a ait olup MEDAK
+    uygulama içeriğini değiştirme, ekleme, çıkarma yapma, güncelleme yapma hakkını saklı tutar. Yapılacak güncellemeler
+    nedeni ile teknik yetersiz cihazlar uygulamadaki yenilikleri kullanamayabilir. <br>
+    <strong>4.1.7</strong> Kullanıcı, MEDAK’ın yürürlükteki emredici mevzuat hükümleri gereğince resmi makamlara
+    açıklama yapmakla yükümlü olduğu durumlar içerisinde, resmi makamlarca usulü dairesinde bu bilgilerin talep edilmesi
+    halinde üyelere ait gizli/kişisel/sağlık bilgilerini resmi makamlara açıklamaya yetkili olacağını ve bu sebeple
+    MEDAK’tan her ne nam altında olursa olsun tazminat talep edilemeyeceğini kabul eder. Yine kullanıcı, MEDAK’ın
+    kullanıcıların kişisel verilerini 6698 sayılı Kişisel Verilerin Korunması Hakkında Kanunda (KVKK) öngörülen veri
+    işlemeye ilişkin ilkelere ve işlenme şartlarına uygun olarak işleyeceğini, KVKK uyarınca çalışanlarını bu konuda
+    bilgilendireceğini kabul eder.<br>
+    <strong>4.1.8</strong> Kullanıcılar, HERA’ya kayıt aşamasında ve uygulama içerisinde kendilerinden istenebilecek
+    bilgilerin doğru ve hukuka uygun olduğunu kabul ve taahhüt etmektedirler. MEDAK, kullanıcılar tarafından HERA’ya
+    kendileri tarafından yüklenen, değiştirilen ve sağlanan bilgilerin ve içeriklerin doğruluğunu araştırma; bu bilgi ve
+    içeriklerin güvenli, doğru, işbu sözleşmenin hükümlerine ve hukuka uygun olduğunu taahhüt ve garanti etmekle yükümlü
+    ve sorumlu olmadığı gibi söz konusu bilgi ve içeriklerin yanlış veya hatalı olmasından ve/veya bu içerikler
+    aracılığıyla diğer internet sitelerine yapılan yönlendirmelerden dolayı ortaya çıkacak hiçbir zarardan sorumlu
+    tutulamaz. Kullanıcı, uygulamada ilgili bölümlerde sağladığı iletişim bilgilerinin yalnızca kendisine ait ve
+    yalnızca kontrolü altındaki iletişim bilgileri olduğunu ve bu iletişim bilgilerini aktif olarak kullandığını taahhüt
+    etmiştir. Bu iletişim bilgilerinin kullanıcının kendisine ait olmamasından veya iletişim bilgilerini aktif olarak
+    kullanmamasından dolayı oluşabilecek zararlardan uygulama sahibi sorumlu tutulamaz. <br>
+    <strong>4.1.9</strong> Uygulamada ve uygulama üzerinden bağlantı verilen internet sitelerinde, kullanıcı da dahil
+    olma üzere üçüncü kişiler tarafından yayınlanan içeriklerden dolayı MEDAK’ın sorumluluğu bulunmamaktadır. Herhangi
+    bir üçüncü kişi tarafından sağlanan ve yayınlanan bilgilerin, içeriklerin, görsel ve işitsel imgelerin doğruluğu ve
+    hukuka uygunluğunun taahhüdü bütünüyle bu eylemleri gerçekleştiren kişilerin sorumluluğundadır. MEDAK, üçüncü
+    kişiler tarafından sağlanan hizmetlerin ve içeriklerin güvenliğini, doğruluğunu ve hukuka uygunluğunu taahhüt ve
+    garanti etmemektedir.<br>
+    <strong>4.1.10</strong> Kullanıcı ve MEDAK bağımsız taraflardır. İşbu sözleşmenin onaylanması ve uygulanması,
+    taraflar arasında ortaklık, temsilcilik veya işçi-işveren ilişkisi olduğu sonucunu doğurmaz.<br>
+    <strong>4.2 Kullanıcı Hak ve Yükümlülükleri</strong><br>
+    <strong>4.2.1</strong> Kullanıcı, kendisinden istenilen bilgileri tam ve gerçeğe uygun olarak doldurmak ve
+    gerektiğinde güncellemek zorundadır. Bilgilerin eksik ve/veya gerçeğe uygun olarak doldurulmamasından kullanıcı
+    sorumludur.<br>
+    <strong>4.2.2</strong> Kullanıcı, uygulamanın internet bağlantısı ile çalıştığını, bazı uygulama içeriklerinin, yazı
+    ve görsellerin internet bağlantısı ile görüntülendiğini, wifi üzerinden veya kullanıcının internet paketi üzerinden
+    internet kullanım bedellerinin tarafından karşılanacağını ve bu hususta bilgilendirildiğini kabul ve beyan eder.
+    <br>
+    <strong>4.2.3</strong> Kullanıcı, uygulama tarafından sağlanan bilgilerin tanı ve tedavi amaçlı olmadığını, sadece
+    tavsiye ve bilgilendirme niteliğinde olduğunu, içeriğin kullanımının tamamen kendi sorumluluğunda olduğunu bildiğini
+    kabul ve beyan eder. <br>
+    <strong>4.2.4</strong> Kullanıcı, uygulamadaki hiçbir içeriğin bir doktor tarafından önerilen bilginin yerine
+    geçmediğini ve uygulamadaki bilgilerin kullanımının kendi takdir ve sorumluluğunda olduğu kabul eder.<br>
+    <strong>4.2.5</strong> Kullanıcı, uygulama aracılığıyla MEDAK’a verdiği bilgilerin bir veritabanında, MEDAK’ın
+    istediği süre boyunca saklanacağını ve MEDAK üyeliğe ilişkin kullanıcı bilgilerini, kullanıcı güvenliği, kendi
+    yükümlülüğünü ifa ve bazı istatistiki değerlendirmeler için dilediği biçimde süresiz olarak kullanabilir. 4.1.5.
+    maddede belirtilen durumlarda bu bilgilerin kullanılabileceğini, kendi talebi olmadığı sürece verdiği bilgilerin
+    değiştirilemeyeceğini kabul eder.<br>
+    <strong>4.2.6</strong> Her kullanıcı uygulamayı kullanmadan önce verilecek eğitime katılmakla ve bu eğitimde
+    verilecek onam formunu imzalamakla yükümlüdür. Kullanıcılar, HERA uygulamasının içinde yer aldığı çalışmaya
+    katılımın gönüllülük esasına dayandığını, istedikleri zaman neden belirtmeksizin çalışmadan ayrılabilme hakkına
+    sahip olduklarını kabul ederler. Çalışmadan ayrılma durumunda 4.1.5. ve 7. maddede belirtilen hususlar
+    geçerlidir.<br>
+    <strong>4.2.7</strong> Kullanıcılar, çalışmaya katılma aşamasında imzalanan onam formu ve verilen eğitimler ile işbu
+    sözleşme arasındaki farklılıklarda, işbu sözleşmede yer alan maddelerin geçerli olduğunu kabul eder. <br>
+    <strong>4.2.8</strong> Kullanıcılar, hesaplarına erişebilmek amacıyla kullandıkları kullanıcı adı ve şifrenin
+    saklanmasından ve güvenliğinden sorumludurlar. Bu bilgilerin üçüncü kişilere verilmesi, üçüncü kişiler tarafından
+    elde edilmesi ve/veya bu bilgiler ile kullanıcı hesaplarından elde edilen bilgilerin kullanılması ve bu durumların
+    sonucunda oluşabilecek sorunlardan uygulama sahibi sorumlu tutulamaz.<br>
+    <strong>5. Sözleşme Değişiklikleri</strong><br>
+    MEDAK, günün koşullarına ve ilgili mevzuatlardaki değişikliklere bağlı olarak, işbu kullanıcı sözleşmesini veya
+    herhangi bir hükmünü, uygun göreceği herhangi bir zamanda, mobil uygulamada ilan etmek suretiyle değiştirebilir.
+    <br>
+    <strong>6. Üyeliğin Sona Ermesi</strong><br>
+    HERA’ya kullanıcı olarak kabul etmiş sayılacağınız, yukarıdaki kuralları içeren anlaşma, HERA/MEDAK tarafından her
+    zaman herhangi bir gerekçe göstermeden, herhangi bir bildirimde bulunmadan ve herhangi bir tazminat ödeme
+    yükümlülüğü bulunmadan ve derhal yürürlüğe girecek şekilde tek taraflı olarak feshedilebilir ve kullanıcının
+    uygulamadan yararlanmasına son verilebilir.<br>
+    <strong>7. Uygulanacak Hukuk ve Yetki</strong><br>
+    <strong>7.1</strong> Kullanıcı, işbu sözleşmede yer alan maddelerin tümünü okuduğunu, anladığını, kabul ettiğini ve
+    kendisiyle ilgili verdiği bilgilerin eksiksiz ve doğru olduğunu onayladığını beyan, kabul ve taahhüt etmiştir. <br>
+    <strong>7.2</strong> İşbu sözleşmenin uygulanmasında, yorumlanmasında ve bu sözleşme dahilinde doğan hukuki
+    ilişkilerin yönetiminde Türk Hukuku uygulanacaktır. İşbu sözleşmeden dolayı doğan veya doğabilecek her türlü
+    ihtilafın halinde İstanbul Anadolu Mahkemeleri ve İcra Daireleri yetkilidir.<br>
+    <strong>7.3</strong> İşbu sözleşme 7 (yedi) maddeden oluşmakta olup kullanıcının elektronik olarak onay vermesi ile
+    karşılıklı kabul edilerek yürürlüğe girmiştir.<br>
+  </div>
+
+  <div *ngIf="lang=='ar'">
+
+    <strong>
+      اتفاقية مستخدم تطبيق HERA للهاتف المحمول
+    </strong><br>
+    1. الأطراف
+    <br>1.1. اتفاقية المستخدم هذه التي تم ترتيبها بين جمعية البحث والإنقاذ الطبي (MEDAK) "صاحبة التطبيق" والتي عنوانها,
+    حي اسين تيبة- شارع فوسون مديرية الدفاع المدني عمارة كارتال رقم:4 - اسطنبول والشخص (المستخدم) الذي سجّل في تطبيق HERA
+    للهاتف المحمول, تعتبر معقودة وداخلة حيز التنفيذ بشكل متبادل عند قيام المستخدم المستفيد من التطبيق بموجب العقد
+    بإستكمال تسجيل العضوية وقراءة هذه الإتفاقية, فهمها, قبولها والموافقة عليها في بيئة الكترونية.
+    <br>2. موضوع العقد
+    <br>2.1 موضوع هذا العقد، هو تحديد الحقوق والالتزامات المتبادلة لكلا الطرفين من ناحية شروط الإستفادة من الخدمات
+    المقدمة في تطبيق الهاتف المحمول HERA المملوك من قبل جمعية البحث والإنقاذ الطبي (MEDAK)، والذي تم تطويره من قبل شركة
+    وكالة W للبرمجيات والإعلان المحدودة الموجودة في عنوان شارع طريق مجمع بيترول- مجمع بيترول 8- بناء D:8 نيسبيتية
+    بيشيكتاش اسطنبول والمدعومة من قبل صندوق Grand Challenges Canada-Bold Ideas with Big Impact®.
+    <br>3. التعاريف
+    <br>3.1 تطبيق الهاتف المحمول: اسم تطبيق الهاتف المحمول هو "HERA (تطبيق التسجيل الصحي)". في حين يعبّر تطبيق الهاتف
+    المحمول HERA عن برمجيات تطبيق الهاتف المحمول والخدمات المقدمة بشكل مرتبط بهذا البرنامج الذي يعمل على جميع الأجهزة
+    المحمولة. HERA، هو تطبيق الهاتف المحمول المتعلق بالصحة والذي تم تطويره لأجل زيادة الرعاية ما قبل الولادة لدى النساء
+    اللاجئات السوريات في تركيا ورفع معدل تطعيم الأطفال.
+    <br>3.2 العضو /المستخدم: يعبر عن جميع الأشخاص الذين قاموا بالتسجيل في تطبيق الهاتف المحمول بالوسائل والأساليب
+    المنصوص عليها في هذا العقد والمستفيدين من الخدمات التي يقدمها تطبيق الهاتف المحمول ضمن الشروط المحددة في هذا العقد.
+    <br>3.3 أدوات الوصول إلى التطبيق: هي المعلومات الخاصة بالمستخدم فقط، مثل صفحة إدارة حساب المستخدم, اسم المستخدم الذي
+    يسمح الوصول الى التطبيق وكلمة المرور.
+    <br>3.4 الخدمات: تعبّر عن جميع المعاملات المدرجة في المادة 4 من العقد، والتي سيقوم المستخدمون بالإستفادة منها عبر
+    تطبيق HERA.
+    <br>3.5 قنوات الاتصال: تعني وسائل الإعلام المستخدمة في التواصل الفوري مع التطبيق.
+    <br>3.6 المعلومات الشخصية/ المعلومات السرية: تعبّر عن اسم الشخص, اسم العائلة, العنوان, رقم الهاتف, عنوان البريد
+    الإلكتروني ,الإجابات على الأسئلة المتعلقة بصحة المستخدم من أجل أداء الخدمة المقدمة من قبل التطبيق، صور التقارير
+    الصحية التي يمكن للمستخدم تحميلها إلى التطبيق بإرادته الخاصة وجميع أنواع الكتابات والمعلومات والعلامات البصرية
+    لتحديد هوية المستخدم.
+    <br>4. الحقوق والالتزامات
+    <br>4.1 حقوق والتزامات جمعية البحث والإنقاذ الطبي
+    <br>4.1.1 ستوفر جمعية البحث والإنقاذ الطبي الخدمات التي تعهّدت على تنفيذها بناءً على طلب المستخدم من خلال HERA.
+    الخدمات التي تعهّدت HERA بها؛ إرسال الإخطار الفوري بواسطة التطبيق قبيل مواعيد المعاينة الى الأشخاص المعنيين بغرض
+    تطوير خدمات رعاية ما قبل الولادة للنساء اللواجئ المقيمات في تركيا, إرسال الإخطار الفوري بواسطة التطبيق قبيل مواعيد
+    التطعيم بهدف التذكير بمواعيد التطعيم وزيادة معدل تطعيم الأطفال الذين تتراوح أعمارهم ما بين 0 - 2 سنة للاجئات
+    السوريات اللات يعيشن في تركيا, تبادل المعلومات الصحية حول الحمل والأطفال, تقديم النصائح والتوصيات فيما يتعلق بهذه
+    المواضيع, توفير منصة يمكن فيها للمستخدمين الحفاظ على سجلاتهم الصحية وضمان مشاهدتهم لهذه المعلومات بإرادتهم الحرة فقط
+    عند الطلب.
+    <br>4.1.2 المعلومات المقدمة من قبل صاحب التطبيق والمحتويات المتعلقة بموضوع الصحة هي بمثابة توصيات فقط لا تحمل أية
+    أهداف تشخيصية أو علاجية. لا يجوز للمستخدم أن يظهر صاحب التطبيق كمسؤول عن أي أمور طبية, اجتماعية وقانونية قد تنشأ
+    فيما يتعلق باستخدام التطبيق والتوصيات المشارك بها في التطبيق. أيضا صاحب التطبيق؛ لا يضمن للمستخدم تقديم التطبيق 24/7
+    دون انقطاع ولا يعطي أي التزام على مستوى الخدمة أو الأداء حول هذا الموضوع. الاستخدام الفعال للتطبيق وجميع نتائج هذا
+    الاستخدام هي مسؤولية المستخدم, ولن تكون MEDAK مسؤولة بأي شكل من الأشكال عن أي أضرار مباشرة أو غير مباشرة قد تنشأ
+    نتيجة للحصول على النتائج المتوقعة منه بشكل غير كامل أو إذا كانت غير مكتملة أو غير مناسبة لهدف البرنامج.
+    <br>4.1.3 صاحب التطبيق ليس مسؤول عن أي انقطاع أو فشل قد يحدث في مجال الحصول على الخدمة لأسباب تتعلق بأفعال الأطراف
+    الثالثة, المؤسسات والمنظمات الموفرة للخدمة الصحية والتي تم تعيينها من قبل وزارة الصحة في الجمهورية التركية من أجل
+    تطبيق التطاعيم بشكل مجاني للأطفال الذين تتراوح أعمارهم ما بين 0-2 سنة، المشاكل النابعة من موظفين الصحة العاملين في
+    الأماكن المذكورة, المؤسسات والمنظمات الموفرة للخدمة الصحية والتي تم تعيينها من قبل وزارة الصحة في الجمهورية التركية
+    من أجل تقديم خدمات رعاية ما قبل الولادة بشكل مجاني, المشاكل النابعة من موظفين الصحة العاملين في الأماكن المذكورة,
+    انقطاع الإنترنت ومشاكل الاتصال وما شابه من أمور.
+    <br>4.1.4 التسجيل في التطبيق مجاني. الحصول على الخدمات التي يقدمها البرنامج مجاني. التطبيق للاستخدام الشخصي والفردي.
+    سيتمكن المستخدمون من الوصول إلى التطبيق عن طريق أرقام الهاتف الخاصة بهم وكلمة المرور التي ينشؤوها أثناء عملية
+    التسجيل. صاحب التطبيق غير مسؤول عن المواقف التي قد تحدث في حال إعطاء المستخدم فيها اسم المستخدم وكلمة المرور الخاصة
+    به الى طرف ثالث أو في حال فقدانه هذه المعلومات.
+    <br>4.1.5 سيستخدم مالك التطبيق جميع معلومات المستخدمين الموجودة في التطبيق في الدراسات الميدانية والمقالات العلمية
+    التي سيقوم بتنفيذها. يحتفظ مالك التطبيق بحق مشاركته المعلومات ذات الصلة من المقدم للدعم المالي لهذا التطبيق صندوق
+    Grand Challenges Canada-Bold Ideas with Big Impact®. يقر المستخدمون ويوافقون على أن هذه المعلومات قد يتم استخدامها
+    من قبل مالك التطبيق وصندوق Grand Challenges Canada-Bold Ideas with Big Impact® ؛ بدون استخدام التطبيق، دون حذف حساب
+    المستخدم، ولا يمكن للمستخدمين إدعاء أية حق حول موضوع مشاركة معلومات المستخدم طوال استخدامه للتطبيق, عدم لغي المستخدم
+    لحسابه وطوال فترة وجوده ضمن الدراسة التي يتم فيها استخدام تطبيق الهاتف المحمول HERA. مشاركة المعلومات ذات الصلة ليس
+    لأغراض إعلانية أو تجارية.
+    <br>
+    يوافق المستخدم ويلتزم بأن فكرة تطبيق HERA والحقوق الصناعية تنتمي الى MEDAK ويتعهّد أنه لن يقوم بنسخ, نشر, توزيع أو
+    معالجة الصور, النصوص, الصور البصرية والسمعية, الملفات, قواعد البيانات, الكتيبات, المعلومات الموضّحة لعمليات العلاج
+    الموجودة في التطبيق بالإضافة الى جميع المحتويات الموجودة هناك كما انه لن يقوم بأية أفعال قد تشكل تعرضّا على حقوق
+    صاحب التطبيق وممتلكاته. وبالتالي، فإن الشخص الوحيد المسؤول والمسائل عن الأضرار التي قد تحدث هو المستخدم وسيقوم على
+    الفور بتعويض الأضرار التي لحقت بمالك التطبيق ضد هذا النوع من المطالبات. 4.1.6 قد يطلب الجهاز المحمول للمستخدم أن
+    يكون المستخدم متصلاً بالإنترنت عبر الواي فاي للوصول إلى تطبيقات آب ستور أو قوقل بلاي ستور من أجل تنزيل التطبيق
+    وتحديثه. سيتم تطبيق البنود والشروط العامة لآب ستور و قوقل بلاي ستور وفقًا لنوع الجهاز المحمول واستخدام أية من آب
+    ستور أو قوقل بلاي ستور.
+    تنتمي جميع حقوق التطبيق إلى MEDAK وتحتفظ MEDAK بالحق في تعديل محتوى التطبيق وإضافته وإزالته وتحديثه. نظرًا للتحديثات
+    التي تحدث، قد لا تتمكن الأجهزة ذو التقنية غير الكافية من استخدام الابتكارات الجديدة في التطبيق.
+    <br>4.1.7 يقبل المستخدم بعدم طلب أية تعويضات تحت أية ظروف كانت في الحالات التي تكون فيها MEDAK ملزمة بالإدلاء ببيان
+    إلى السلطات الرسمية وفقًا لأحكام التشريع الإلزامي المعمول به، ويقبل بعلمه أن لديها السلطة من أجل مشاركة المعلومات
+    الصحية/ الشخصية/ السرية للمستخدمين الى الإداراة الرسمية للسلطات في حال طلبها لتلك المعلومات. مرة أخرى فإن المستخدم،
+    يقبل أن تقوم MEDAK بمعالجة البيانات الشخصية للمستخدمين وفقًا للمبادئ وشروط المعالجة المتعلقة بمعالجة البيانات
+    المنصوص عليها في قانون حماية البيانات الشخصية رقم 6698 (KVKK) وإبلاغ موظفيها حول هذا الموضوع وفقًا لـ KVKK.
+    <br>4.1.8 يقر المستخدمون ويتعهدون بأنهم سوف يقومون بتعبئة المعلومات المطلوبة من قبلهم في مرحلة التسجيل في HERA
+    وأثناء استخدام التطبيق بشكل صحيح ومناسب للقانوني. تحقيق MEDAK في دقة المعلومات والمحتويات التي تم تحميلها وتعديلها
+    وتوفيرها من قبل المستخدمين إلى HERA: لضمان وتعهد أن هذه المعلومات والمحتويات آمنة, صحيحة ومناسبة وفقا لأحكام العقد
+    هذا والقانون ويعتبر غير مسؤول عن كون هذه المعلومات أو المحتويات خاطئة أو زائفة و/ أو لن تكون مسؤولة عن أية أضرار قد
+    تنتج بسبب التحويلات المنفذة الى مواقع الويب الاخرى بواسطة هذه المحتويات. يتعهد المستخدم بأن معلومات الاتصال المقدمة
+    في الأقسام ذات الصلة من التطبيق هي معلوماته الشخصية وتنتمي اليه فقط وأنها معلومات التواصل تقع تحت سيطرته فقط ويتعهد
+    أنه يستخدم معلومات التواصل هذه بشكل متواصل. لا يمكن اعتبار مالك التطبيق مسؤولاً عن أي أضرار قد تحدث نتيجة لحقيقة أن
+    معلومات الاتصال هذه لا تخص المستخدم نفسه أو أنه لا يستخدم معلومات الاتصال التي قدّمها بنشاط.
+    <br>4.1.9 لا تتحمل MEDAK أي مسؤولية عن المحتوى المنشور من قبل أطراف ثالثة بما في ذلك المستخدم في التطبيق والمواقع
+    الإلكترونية المرتبطة بالتطبيق. إن مسؤولية دقة وشرعية المعلومات, المحتوى, الصور المرئية والمسموعة المقدمة والمرسلة من
+    قبل أي طرف ثالث هي مسؤولية جميع الأشخاص الذين يقومون بهذه الإجراءات. MEDAK غير مسؤولة ولا تضمن أمان ودقة وشرعية
+    الخدمات والمحتويات التي يتم تقديمها من قبل الأطراف الثالثة.
+    <br>4.1.10 المستخدم و MEDAK طرفان مستقلان. لا ينتج عن التصديق على هذا العقد وتطبيقه شراكة أو تمثيل أو علاقات عمل بين
+    الطرفين.
+    <br>4.2 حقوق المستخدم ومسؤولياته
+    <br>4.2.1 يتعين على المستخدم تعبئة المعلومات المطلوبة منه بنفسه, بصدق تام ومناسب للحقيقة وتحديثها إذا لزم الأمر.
+    المستخدم مسؤول عن تعبئة المعلومات بشكل غير مكتمل و / أو غير مناسب للحقيقة.
+    <br>4.2.2 يوافق المستخدم ويعلن أنه على معرفة بأن التطبيق يعمل مع اتصال بشبكة الإنترنت، وأن عرض بعض محتويات التطبيق
+    الكتابية والمرئية يتم مع اتصال بشبكة الإنترنت، ويقبل بتغطية تكاليف استخدام الإنترنت من قبل طرفه أسواء كان يتصل
+    بالواي فاي أو باقة الإنترنت الخاصة بهاتفه.
+    <br>4.2.3 يقر المستخدم ويعلن أنه يعلم أن المعلومات المقدمة من التطبيق ليست لأغراض تشخيصية وعلاجية، بل هي فقط للحصول
+    على المشورة والمعلومات، وأن استخدام المحتوى يقع على مسؤوليته وحده فقط.
+    <br>4.2.4 يقر المستخدم ويعلم بأنه لا يوجد محتوى في التطبيق يعد بديلاً عن المعلومات الموصى بها من قبل الطبيب وأن
+    استخدام المعلومات الموجودة في التطبيق هو أمر يقع على تقديره / مسؤوليته.
+    <br>4.2.5 يعلم المستخدم أنه يتم حفظ المعلومات التي قدمها الى MEDAK بواسطة البرنامج في قاعدة بيانات وأنه سوف يتم
+    الإحتفاظ بها للمدة التي يرغب فيها MEDAK وأنه يمكن لـ MEDAK استخدام هذه المعلومات بالشكل الذي يرغب فيه إلى أجل غير
+    مسمى من أجل الإيفاء بمسؤولياته وضمان أمان المستخدم وإجراء بعض التقييمات الإحصائية.
+    <br>4.1.5. يقبل أنه يمكن استخدام هذه المعلومات في الحالات المحددة في المادة وأنه لا يمكن تغيير المعلومات التي قام
+    بتقديمها ما لم يكون طلب المستخدم نفسه.
+    <br>4.2.6 يلتزم كل مستخدم بحضور التدريب الذي سيتم عقده قبل استخدام التطبيق والتوقيع على نموذج الموافقة الذي سوف يتم
+    إعطائه في هذا التدريب. يوافق المستخدمون على أن المشاركة في الدراسة التي يلعب في تطبيق HERA فيها دورا عبارة عن مشاركة
+    طوعية، ولهم الحق في ترك الدراسة دون تحديد سبب. في حالة ترك الدراسة فإن المواد 4.1.5. و 7 تعتبر سارية.
+    <br>4.2.7 يقر المستخدمون بأن المواد المذكورة في الاتفاقية هذه هي التي تعتبر سارية في حال وجود اختلافات بين نموذج
+    الموافقة الموقع في مرحلة الإشتراك بالدراسة وبين التدريب المقدم والاتفاقية هذه.
+    <br>4.2.8 يتحمل المستخدمون مسؤولية تخزين اسم المستخدم وكلمة المرور للوصول إلى حساباتهم والحفاظ عليهما. لا يمكن
+    اعتبار مالك هذا التطبيق مسؤولاً عن أي مشاكل قد تنشأ نتيجة لإعطاء هذه المعلومات إلى أطراف ثالثة, الحصول عليها من قبل
+    أطراف ثالثة و / أو استخدام هذه المعلومات مع المعلومات التي يتم الحصول عليها من حسابات المستخدمين .
+    <br>5. تغيرات العقد
+    وفقًا للتغيرات وفقا للظروف اليومية والمتعلقة بالتشريعات ذات الصلة ، يجوز لـ MEDAK في أي وقت يراه مناسبًا, تغيير
+    اتفاقية المستخدم هذه أو أي بند منها بشرط الإعلان عن ذلك في تطبيق الهاتف المحمول.
+    <br>
+    6. إنهاء العضوية
+    الإتفاقية التي تحتوي على القواعد المذكورة أعلاه والتي تجعلكم تقبلون كمستخدمين لـ HERA,
+    <br>
+    يمكن فسخها من قبل HERA\MEDAK من طرف واحد في أية وقت كان من دون إظهار أية سبب, القيام بأية إخطار و من دون الإلتزام
+    بدفع أية تعويضات وبشكل يدخل حيز التنفيذ على الفور.
+
+    <br>7. القانون المطبقة والسلطة
+    <br>7.1 يقر المستخدم ويوافق ويتعهد بأنه قرأ وفهم وووافق على بنود الإتفاقية هذه وأن المعلومات الواردة في هذه
+    الاتفاقية والمتعلقة بشخصه كاملة وصحيحة.
+    <br>7.2 يتم تطبيق القانون التركي في تطبيق وتفسير الإتفاقية هذه وإدارة العلاقات القانونية الناشئة بموجب هذه الإتفاقية
+    . في حال وجود أي نزاع ناشئ عن أو قد ينشأ بسبب هذا العقد ، يتم اعتماد محاكم اسطنبول الأناضولية ومكاتب التنفيذ في
+    التحكيم.
+    <br>7.3 يتكون هذا العقد من سبعة (7) بنود وقد دخل حيز التنفيذ عن طريق موافقة المستخدم الكترونيا وقبول الموافقة من كلا
+    الطرفين.
+
+
+  </div>
+
+  <div *ngIf="lang=='en'">
+    <strong>HERA Mobile Application User Agreement</strong><br />
+    <strong>1. Parties</strong>
+    <br />
+    <strong>1.1.</strong> This User Agreement is issued between the Medical Search and Rescue Association (MEDAK)
+    (Application Owner) at the address "Esentepe Mah. Füsun Sok. Sivil Savunma Müd. Kartal Sit. No: 4 Kartal İstanbul"
+    and the person (User) registered to the HERA mobile application, and once the User who has benefited from the
+    application under the Agreement completes the membership registration and electronically confirms that he/she has
+    read, understood and accepted this Agreement, the Agreement shall be executed and enter into force mutually.
+    <br/>
+    <strong>2. Subject of the Agreement</strong><br />
+    <strong>2.1</strong> Subject of this Agreement is the determination of the mutual rights and obligations of the
+    parties, services and the conditions for benefiting from the services offered in the HERA mobile application which
+    is supported by Grand Challenges Canada-Bold Ideas supported by Big Impact® fund, ++ developed by the company W
+    AJANS YAZILIM VE REKLAM LTD. ŞTİ. resident at the address "Petrol Sitesi Yolu Sok. Petrol Sitesi 8. Blok D: 8
+    Nispetiye Beşiktaş İstanbul" and belongs to the Medical Search and Rescue Association (MEDAK).
+    <br/><strong>3. Definitions</strong><br />
+    <strong>3.1</strong> Mobile application: The name of the mobile application is 'HERA (Health Recording Application)'
+    and the mobile application named HERA refers to the mobile application software running on all mobile devices and
+    the services provided in connection with this software. HERA is a mobile application that is developed to provide an
+    increase of prenatal care among Syrian refugee women in Turkey and the increase of the vaccination among Syrian
+    refugee children.
+    <br/><strong>3.2</strong> Member/User: It refers to all the persons benefiting from the services provided by the mobile
+    application in accordance with the conditions stated in this Agreement by registering the mobile application with
+    the means and methods specified in this Agreement.
+    <br/><strong>3.3</strong> Application access tools: It refers to the user's account management page and the information
+    within the knowledge of the User only such as the user name and password that provides access to the application.
+    <br/><strong>3.4</strong> Services: It refers to all transactions included in Article 4 of the Agreement, which will be
+    utilized by the Users via HERA application.
+    <br/><strong>3.5</strong> Communication channels: It refers to the Application and the push notification communication
+    channel.
+    <br/><strong>3.6</strong> Personal information/confidential information: It refers to Personal name, surname, address,
+    phone number, e-mail address, answers to questions about the user's health in order to perform the service provided
+    by the application, images of the health reports that the user may attach to the application by his/her own will and
+    all kinds of text, visual signs and information to identify the user.
+    <br/><strong>4. Rights and Obligations</strong><br />
+    <br/><strong>4.1</strong> Rights and Obligations of the Medical Search and Rescue Association (MEDAK)
+    <br/><strong>4.1.1</strong> The Medical Search and Rescue Association will provide the services that it undertakes at the
+    user's request through HERA application. Services that HERA committed are to send push notifications via the
+    application before the date control of Syrian refugee women in Turkey in order to develop prenatal care services for
+    these women, to improve the vaccination rate of the children of Syrian refugee women between 0-2 years of age by
+    sending push notifications prior to their vaccination periods, to share health information related to pregnancy and
+    children, to provide advice on these issues, to present a platform where users can store electronic health records
+    and display this information only when they wish.
+    <br/><strong>4.1.2</strong> The information provided by the application owner and the health contents provided are only
+    for advisory purposes and are not intended for diagnosis or treatment. The user shall not hold the application owner
+    responsible for any medical, social and legal matters that may arise regarding the use of the application or the
+    recommendations shared. Also, the application owner does not guarantee users that the application will operate
+    uninterruptedly for 7 days and 24 hours and does not provide any service or performance level commitment in this
+    regard. The effective use of the application and all the consequences of such use shall be under the responsibility
+    of the user, and the MEDAK shall not be liable in any way whatsoever for the improper or incomplete results of the
+    application itself, and for the direct and indirect damages that may arise from such consequences.
+    <br/><strong>4.1.3</strong> Application owner is not responsible for the actions of the third parties, force majeure,
+    health service providing institutions and organizations that the Republic of Turkey Ministry of Health assigned to
+    ensure free vaccination of children between the ages 0-2, issues arising from the staff working in the institutions
+    and organizations in question, health service providing institutions and organizations that the Republic of Turkey
+    Ministry of Health assigned to ensure free prenatal care services, issues arising from the staff working in the
+    institutions and organizations in question, interruptions or failures in service provision due to situations such as
+    internet outages and connection problems.
+    <br/><strong>4.1.4</strong> Membership of the application is free of charge. The service provided by the application is
+    free of charge. The application is for private and individual use. At the registration stage, users will be able to
+    access the application using their phone numbers and passwords. The application owner is not liable for any
+    situation in which the user may give his/her user name and password to a third party or lose such information.
+    <br/><strong>4.1.5</strong> The application owner will use all the information of the users in the field studies and
+    prospective scientific articles. The application owner reserves the right to share the information mentioned above
+    with Grand Challenges Canada-Bold Ideas with Big Impact® fund. Users acknowledge and agree that this information may
+    be used by the application owner and Grand Challenges Canada-Bold Ideas with Big Impact®. The user cannot claim any
+    rights on information sharing unless the user ceases to use the application, deletes his account and leaves the work
+    in the HERA mobile application. The information sharing in question is not for advertising or commercial
+    purposes.<br />
+    The user accepts and undertakes that the intellectual and industrial property rights of the HERA application belong
+    to MEDAK and that he/she will not reproduce, copy, distribute and process images, texts, visual and auditory images,
+    files, databases, catalogs, information that explains treatment processes and any content in the application and not
+    act in a way to encroach the rights and assets of the application owner. The only person responsible for the damages
+    that may arise due to these reasons mentioned above will be the user and shall immediately reimburse the application
+    owner against such claims. <br />
+    <strong>4.1.6</strong> The user's mobile device may request that the user is connected to the internet over Wi-Fi to
+    access the App Store or Google Play Store applications to download and update the application. The General Terms and
+    Conditions of the App Store or Google Play Store will apply depending on the type of mobile device and the use of
+    the App Store or Google Play Store.
+    <p>All rights of the application belong to MEDAK and MEDAK reserves the right to modify, add, remove and update the
+      contents of the application. Due to the updates to be made, technically insufficient devices may not be able to
+      use the innovations in the application.</p>
+      <br/><strong>4.1.7</strong> The user agrees that in cases where MEDAK is obliged to make a statement to the public
+    authorities in accordance with the provisions of the mandatory legislation in force, MEDAK shall be authorized to
+    disclose the confidential / personal / health information of the members to the official authorities if such
+    information is requested by public authorities in due form and that no compensation can be claimed from MEDAK for
+    any reason whatsoever. In the same way, the user agrees that MEDAK shall process the personal data of the users in
+    accordance with the principles and processing requirements of the data processing stipulated in the Law on the
+    Protection of Personal Data No. 6698 (LPPD) and shall inform its employees in accordance with the LPPD.
+    <br/><strong>4.1.8</strong> Users acknowledge and undertake that the information required by them at the registration
+    stage of HERA and in the application is correct and lawful. MEDAK shall not be responsible and liable to investigate
+    and verify that the information and contents uploaded, modified and provided by users to HERA is true, or that such
+    information and contents are safe, accurate, and in compliance with the provisions of this Agreement and law and it
+    shall not be held responsible for any damages resulting from incorrect or erroneous information and contents and/or
+    referrals to other websites through these contents. The user undertakes that the contact information provided in the
+    relevant sections of the application only belongs to him/her and that they are only the contact information under
+    his/her control and this contact information is actively used by him/her. The application owner shall not be held
+    responsible for any damages that may occur as a result of the fact that this contact information does not belong to
+    the user or the does not actively use the contact information.
+    <br/><strong>4.1.9</strong> MEDAK does not have any responsibility for the content published by third parties including
+    the user on the application and on the websites which are linked through the application. The commitment of the
+    accuracy and legality of the information, content, visual images and audio items provided and broadcast by any third
+    party is the responsibility of the persons who perform these actions in its entirety. MEDAK does not warrant and
+    undertakes the security, accuracy, and legality of the services and contents provided by third parties.
+    <br/><strong>4.1.10</strong> The user and MEDAK are independent parties. The approval and performance of this Agreement
+    shall not result in a partnership, agency or employee-employer relationship between the parties.
+    <br/><strong>4.2 Rights and Obligations of the User </strong>
+    <br/><strong>4.2.1</strong> The user must fill-in and update the requested information in a complete and true form and
+    update if necessary. The user is responsible for filling the information completely and right.
+    <br/><strong>4.2.2</strong> The user accepts and declares that the application works with the internet connection, some
+    application contents, images, and images are displayed via the internet connection and that the internet usage fees
+    via Wi-Fi or internet package will be at his/her own expense and is informed of in this respect.
+    <br/><strong>4.2.3</strong> The user accepts and declares that the information provided by the application is not for
+    diagnostic and treatment purposes, is only for advice and briefing, and that the use of the content is solely
+    his/her responsibility.
+    <br/><strong>4.2.4</strong> The user acknowledges that no content in the application supersedes any information
+    recommended by a physician and that it is his/her discretion and responsibility to use the information in the
+    application.
+    <br/><strong>4.2.5</strong> The user acknowledges and agrees that the information he/she gives to the MEDAK through the
+    application will be stored in a database for a period determined by the MEDAK. MEDAK shall be able to use the user
+    information related to the membership indefinitely, for purposes such as user security, the performance of its
+    obligations and some statistical evaluations. The user agrees that the information can be used in the cases
+    specified in Article 4.1.5. and that the information he/she provides cannot be changed unless he requests.
+    <br/><strong>4.2.6</strong> Each user is obliged to attend the training to be given before using the application and to
+    sign the consent form to be given in this training. Users agree that participation in the study, which includes the
+    HERA application, is on a volunteer basis and that they have the right to leave the study without stating a reason
+    at any time. In case of leaving the study Article 4.1.5. and Article 7 shall apply.
+    <br/><strong>4.2.7</strong> Users agree that, in the event of a difference between the consent form signed during the
+    participation phase and the training provided and the present Agreement, the articles in this Agreement are valid.
+    <br/><strong>4.2.8</strong> Users are responsible for storing and securing the user name and password they use to access
+    their accounts. The application owner cannot be held responsible for the use of this information by third parties,
+    the acquisition of it by third parties and/or the use of the information obtained from the user accounts utilizing
+    this information and any problems that may arise under these circumstances.
+    <br/><strong>5. Amendments to the Agreement</strong>
+    <p>
+      Depending on the conditions of the day and changes in the relevant legislation, the MEDAK may amend this User
+      Agreement or any provision thereof at any time it deems appropriate by communicating it in the mobile application.
+    </p>
+    <br/><strong>6. Termination of Membership</strong>
+    The Agreement which contains the above rules which you will be deemed to have accepted as a user of HERA, may be
+    terminated unilaterally with immediate effect by HERA/MEDAK at any time without any justification, without any prior
+    notice, and without any obligation to pay any indemnity and the user's right to use the application may be
+    terminated.
+    <br/><strong>7. Applicable Law and Authority</strong>
+    <br/><strong>7.1</strong> The User hereby agrees, declares and undertakes that he/she has read, understood and accepted
+    this Agreement and confirms that the information he/she has given about him/her is complete and correct.
+    <br/><strong>7.2</strong> Turkish law shall be applied in the performance, interpretation, and management of the legal
+    relations arising under this Agreement. Istanbul Anatolian Courts and Enforcement Offices are authorized for any
+    dispute that arises, or that may arise out of this Agreement.
+    <br/><strong>7.3</strong> This Agreement consists of 7 (seven) articles, and upon the electronic approval of the user, it
+    has been mutually accepted and entered into force.
+
+  </div>
+
+</ion-content>
+<ion-footer padding text-center *ngIf="!onlyShow">
+  <button ion-button (click)="next()">{{translation.btnAccept}}</button>
+</ion-footer>

@@ -1,0 +1,123 @@
+<ion-content padding>
+
+    <ng-container *ngIf="isFirstStep">
+
+        <div class="logo">
+            <img src="assets/imgs/hera-logo.png">
+        </div>
+
+        <form [formGroup]="frmFirst" inset no-lines autocomplete="off">
+            <ion-item no-padding>
+                <ion-label floating>{{translation.lblPhoneNumber}} <ion-icon class="mini-icon" name="medical" color="danger"></ion-icon>
+                </ion-label>
+                <ion-input mode="ios" formControlName="mobile" type="tel" [brmasker]="{mask:'9 (999) 999-99-99', len:17, type:'num'}"
+                    required></ion-input>
+            </ion-item>
+            <div class="error-message" *ngIf="!frmFirst.get('mobile').valid && (frmFirst.get('mobile').dirty || frmFirst.get('mobile').touched)">
+                <div *ngIf="frmFirst.controls.mobile.hasError('required')"> {{translation.errMobilePhone}} </div>
+                <div *ngIf="frmFirst.controls.mobile.hasError('minlength')"> {{translation.errMobilePhone}} </div>
+                <div *ngIf="frmFirst.controls.mobile.hasError('maxlength')"> {{translation.errMobilePhone}} </div>
+            </div>
+            <ion-item no-padding>
+                <ion-label floating>{{translation.lblPassword}} <ion-icon class="mini-icon" name="medical" color="danger"></ion-icon>
+                </ion-label>
+                <ion-input [type]="passwordType" clearOnEdit="false" formControlName="password"></ion-input>
+                <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+            </ion-item>
+            <div class="error-message" *ngIf="!frmFirst.get('password').valid && (frmFirst.get('password').dirty || frmFirst.get('password').touched)">
+                <div *ngIf="frmFirst.controls.password.hasError('required')"> {{translation.errPassword}} </div>
+                <div *ngIf="frmFirst.controls.password.hasError('minlength')"> {{translation.errPasswordLength}} </div>
+            </div>
+            <ion-item no-padding>
+                <ion-label floating>{{translation.lblPasswordConfirm}} <ion-icon class="mini-icon" name="medical" color="danger"></ion-icon>
+                </ion-label>
+                <ion-input [type]="passwordType" clearOnEdit="false" formControlName="rePassword"></ion-input>
+                <ion-icon item-end [name]="passwordIcon" class="passwordIcon" (click)='hideShowPassword()'></ion-icon>
+            </ion-item>
+            <div class="error-message" *ngIf="!frmFirst.get('rePassword').valid && (frmFirst.get('rePassword').dirty || frmFirst.get('rePassword').touched)">
+                <div *ngIf="frmFirst.controls.rePassword.hasError('required')"> {{translation.errPassword}} </div>
+                <div *ngIf="frmFirst.controls.rePassword.hasError('minlength')"> {{translation.errPasswordLength}}
+                </div>
+                <div *ngIf="frmFirst.controls.rePassword.hasError('notEquivalent')"> {{translation.errConfirmPassword}}
+                </div>
+            </div>
+        </form>
+        <br>
+        <button [disabled]="!frmFirst.valid" (click)="changeStep()" ion-button block color="primary">{{translation.btnRegister}}</button>
+        <br>
+        <button (click)="login()" ion-button block color="secondary">{{translation.btnLogin}}</button>
+
+    </ng-container>
+    <ng-container *ngIf="!isFirstStep">
+
+        <div padding-top text-center>
+
+            <img src="assets/imgs/no-avatar.png" class="avatar" alt="avatar">
+
+
+            <form [formGroup]="frmLast" inset no-lines autocomplete="off">
+                <ion-row>
+                    <ion-col ion-item no-padding>
+                        <ion-label color="primary" stacked>{{translation.lblLastname}} <ion-icon class="mini-icon" name="medical"
+                                color="danger"></ion-icon>
+                        </ion-label>
+                        <ion-input formControlName="lastname"></ion-input>
+                        <div class="error-message" *ngIf="!frmLast.get('lastname').valid && (frmLast.get('lastname').dirty || frmLast.get('lastname').touched)">
+                            <div *ngIf="frmLast.controls.lastname.hasError('required')"> {{translation.errLastname}}</div>
+                        </div>
+                    </ion-col>
+                    <ion-col ion-item>
+                        <ion-label color="primary" stacked>{{translation.lblFirstname}} <ion-icon class="mini-icon"
+                                name="medical" color="danger"></ion-icon>
+                        </ion-label>
+                        <ion-input formControlName="firstname"></ion-input>
+                        <div class="error-message" *ngIf="!frmLast.get('firstname').valid && (frmLast.get('firstname').dirty || frmLast.get('firstname').touched)">
+                            <div *ngIf="frmLast.controls.firstname.hasError('required')"> {{translation.errFirstname}}</div>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <ion-row margin-top>
+                    <ion-col ion-item no-padding>
+                        <ion-label color="primary" stacked>{{translation.lblBirthdate}} <ion-icon class="mini-icon"
+                                name="medical" color="danger"></ion-icon>
+                        </ion-label>
+                        <ion-datetime placeholder="{{translation.lblBirthdate}}" class="no-pl inputtitle"
+                            formControlName="birthdate" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" cancelText="{{translation.btnCancel}}"
+                            doneText="{{translation.btnOk}}"></ion-datetime>
+                    </ion-col>
+                    <ion-col ion-item no-lines>
+                        <ion-segment color="primary" margin-top mode="ios" formControlName="gender">
+                            <ion-segment-button value="MALE">
+                                {{translation.lblGenderMan}}
+                            </ion-segment-button>
+                            <ion-segment-button value="FEMALE">
+                                {{translation.lblGenderFemale}}
+                            </ion-segment-button>
+                        </ion-segment>
+                    </ion-col>
+                </ion-row>
+
+                <ion-item no-padding margin-top>
+                    <ion-label color="primary" stacked>{{translation.lblJob}}</ion-label>
+                    <ion-input formControlName="job" type="text"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding>
+                    <ion-label color="primary" stacked>{{translation.lblEmail}} </ion-label>
+                    <ion-input type="email" formControlName="email"></ion-input>
+                </ion-item>
+
+                <ion-item no-padding margin-top>
+                    <ion-label color="primary" stacked>{{translation.lblAddress}}</ion-label>
+                    <ion-textarea rows="3" placeholder="" type="text" formControlName="address"></ion-textarea>
+                </ion-item>
+
+            </form>
+
+            <button [disabled]="!frmLast.valid" (click)="register()" ion-button block color="primary">{{translation.btnSave}}</button>
+        </div>
+
+    </ng-container>
+
+
+</ion-content>

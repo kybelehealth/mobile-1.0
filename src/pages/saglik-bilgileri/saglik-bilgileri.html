@@ -1,0 +1,17 @@
+<ion-header mode="ios">
+  <ion-navbar transparent mode="ios">
+    <ion-title mode="ios">{{translation.lblHeader}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list *ngIf="!isLoading">
+    <ion-item *ngFor="let item of blogList; let orderNo = index;" (click)="openDetail(item)">
+      <span class="number">{{orderNo+1}}</span>
+      <h2>{{item.Title}}</h2>
+      <p>{{item.Abstract }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

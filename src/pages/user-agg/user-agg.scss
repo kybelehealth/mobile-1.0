@@ -1,0 +1,22 @@
+page-user-agg {
+
+    h2 {
+        font-size: 22px;
+        font-weight: 500;
+        color: #333 !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-right: 20px;
+    }
+    p {
+    overflow: inherit;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-overflow: inherit;
+    white-space: normal;
+    color: #8e9093;
+    margin: 0 48px 2px 0; 
+    }
+
+}

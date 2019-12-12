@@ -1,0 +1,44 @@
+<ion-header mode="ios">
+  <ion-navbar transparent mode="ios">
+    <ion-title mode="ios">{{translation.lblTitle}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="logo">
+    <ion-icon name="md-person"></ion-icon>
+  </div>
+  <ion-list>
+    <ion-item (click)="openCategory(1)">
+      <img src="assets/imgs/heartbeat.svg">
+      <h2>{{translation.lblGeneralHealthInfo}}</h2>
+      <p>{{translation.lblGeneralHealthInfoDesc}}</p>
+    </ion-item>
+
+    <ion-item (click)="openCategory(2)">
+      <img src="assets/imgs/care.svg">
+      <h2>{{translation.lblFamilyInfo}}</h2>
+      <p>{{translation.lblFamilyInfoDesc}}</p>
+    </ion-item>
+
+    <ion-item (click)="openCategory(3)">
+      <img src="assets/imgs/medicine.svg">
+      <h2>{{translation.lblPersonalHealthInfo}}</h2>
+      <p>{{translation.lblPersonalHealthInfoDesc}}</p>
+    </ion-item>
+
+    <ion-item (click)="openCategory(4)">
+      <img src="assets/imgs/pediatry.svg">
+      <h2>{{translation.lblChildInfo}}</h2>
+      <p>{{translation.lblChildInfoDesc}}</p>
+    </ion-item>
+
+    <ion-item (click)="openCategory(5)">
+      <img src="assets/imgs/maternity.svg">
+      <h2>{{translation.lblPregnancy}}</h2>
+      <p>{{translation.lblPregnancyDesc}}</p>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

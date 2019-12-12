@@ -1,0 +1,47 @@
+<ion-header mode="ios">
+    <ion-navbar transparent mode="ios">
+      <ion-title mode="ios">{{translation.btnReportUpload}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="logo" *ngIf="!photoSelected">
+    <img src="assets/imgs/camera-area.svg">
+  </div>
+  <h2 *ngIf="!photoSelected"> {{translation.lblDescription}}
+    <br>
+    <br>
+    <strong>{{translation.lblInfo}}</strong>
+  </h2>
+
+  <ion-row *ngIf="!photoSelected">
+    <ion-col>
+      <button ion-button color="secondary" class="callButton" block (click)="call()">
+          <ion-icon start name="camera"></ion-icon>
+          {{translation.btnReportUpload}}
+          <ion-icon end name="arrow-forward"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <form [formGroup]="frmRecord" no-lines *ngIf="photoSelected">
+      <div class="logo">
+          <img [src]="selectedPhoto">
+      </div>
+      <ion-item>
+        <ion-label  mode="ios" color="white" floating>{{translation.lblFormDescription}}</ion-label>
+        <ion-textarea rows="3" placeholder="" type="text"  formControlName="Name" ></ion-textarea>
+      </ion-item>
+      <div class="error-message" *ngIf="!frmRecord.get('Name').valid && (frmRecord.get('Name').dirty || frmRecord.get('Name').touched)"> 
+          <div *ngIf="frmRecord.controls.Name.hasError('required')"> {{translation.errFormDescription}} </div> 
+      </div>      
+  </form>
+  <br>
+  <br>
+  <button *ngIf="photoSelected" ion-button block (click)="saveRecord()" [disabled]="!frmRecord.valid" color="secondary" class="callButton">
+      <ion-icon start name="camera"></ion-icon>
+      {{translation.btnReportUpload}}
+  </button>
+
+</ion-content>

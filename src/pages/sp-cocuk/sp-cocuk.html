@@ -1,0 +1,20 @@
+<ion-header mode="ios">
+    <ion-navbar transparent mode="ios">
+      <ion-title mode="ios">{{translation.lblHeader}} </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item *ngFor="let child of childList" (click)="editChild(child.Id)">
+      {{child.NameSurname}}
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer padding>
+    <button ion-button block color="pink" (click)="editChild(0)">{{translation.btnAddChild}}</button>    
+    <button *ngIf="isRegister" ion-button block (click)="next()">{{translation.btnNext}}</button>    
+</ion-footer>

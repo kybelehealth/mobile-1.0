@@ -1,0 +1,86 @@
+<ion-header mode="ios">
+  <ion-navbar transparent mode="ios">
+    <ion-title mode="ios"></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div padding-top text-center>
+    <img [src]="profilePhoto" class="avatar" alt="avatar" (click)="changePhoto()">
+
+    <form [formGroup]="frmProfile" inset no-lines autocomplete="off">
+        <ion-row margin-top>
+            <ion-col ion-item no-padding>
+                <ion-label color="primary" stacked>{{translation.lblLastname}} <ion-icon class="mini-icon" name="medical"
+                        color="danger"></ion-icon>
+                </ion-label>
+                <ion-input formControlName="lastname"></ion-input>
+                <div class="error-message" *ngIf="!frmProfile.get('lastname').valid && (frmProfile.get('lastname').dirty || frmProfile.get('lastname').touched)">
+                    <div *ngIf="frmProfile.controls.lastname.hasError('required')"> {{translation.errLastname}}</div>
+                </div>
+            </ion-col>
+            <ion-col ion-item>
+                <ion-label color="primary" stacked>{{translation.lblFirstname}} <ion-icon class="mini-icon"
+                        name="medical" color="danger"></ion-icon>
+                </ion-label>
+                <ion-input formControlName="firstname"></ion-input>
+                <div class="error-message" *ngIf="!frmProfile.get('firstname').valid && (frmProfile.get('firstname').dirty || frmProfile.get('firstname').touched)">
+                    <div *ngIf="frmProfile.controls.firstname.hasError('required')"> {{translation.errFirstname}}</div>
+                </div>
+            </ion-col>
+        </ion-row>
+        <ion-row margin-top>
+            <ion-col ion-item no-padding>
+                <ion-label color="primary" stacked>{{translation.lblBirthdate}} <ion-icon class="mini-icon"
+                        name="medical" color="danger"></ion-icon>
+                </ion-label>
+                <ion-datetime placeholder="{{translation.lblBirthdate}}" class="no-pl inputtitle"
+                    formControlName="birthdate" displayFormat="DD/MM/YYYY" pickerFormat="DD/MM/YYYY" cancelText="{{translation.btnCancel}}"
+                    doneText="{{translation.btnOk}}"></ion-datetime>
+            </ion-col>
+            <ion-col ion-item no-lines>
+                <ion-segment color="primary" margin-top mode="ios" formControlName="gender">
+                    <ion-segment-button value="MALE">
+                        {{translation.lblGenderMan}}
+                    </ion-segment-button>
+                    <ion-segment-button value="FEMALE">
+                        {{translation.lblGenderFemale}}
+                    </ion-segment-button>
+                </ion-segment>
+            </ion-col>
+        </ion-row>
+
+        <ion-item no-padding margin-top>
+            <ion-label color="primary" stacked>{{translation.lblJob}}</ion-label>
+            <ion-input formControlName="job" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+            <ion-label color="primary" stacked>{{translation.lblMobile}} </ion-label>
+            <ion-input type="tel" formControlName="mobile"  [brmasker]="{mask:'9 (999) 999-99-99', len:17, type:'num'}"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding>
+            <ion-label color="primary" stacked>{{translation.lblEmail}} </ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item no-padding margin-top>
+            <ion-label color="primary" stacked>{{translation.lblAddress}}</ion-label>
+            <ion-textarea rows="3" placeholder="" type="text" formControlName="address"></ion-textarea>
+        </ion-item>
+
+    </form>
+
+    <br>
+    <button [disabled]="!frmProfile.valid" (click)="update()" ion-button block color="primary">{{translation.btnSave}}</button>
+    <br>
+    <button (click)="logout()" ion-button block outline color="secondary">{{translation.btnLogout}}</button>
+
+    <br>
+    <ion-list>
+        <button ion-item text-center (click)="open('agreement')">{{translation.btnUserAgreement}}</button>
+        <button ion-item text-center (click)="open('kvkk')">{{translation.btnPersonalInfoUsage}} (KVKK)</button>
+    </ion-list>
+    
+  </div>
+</ion-content>

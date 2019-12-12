@@ -1,0 +1,23 @@
+page-welcome-onboard {
+
+
+
+}
+super-tab-button {
+    .ion-ios-checkmark-circle + .text { display: none!important; }
+}
+super-tab-button[ng-reflect-icon="checkmark-circle"] 
+{
+    background-color: #3ca8bf;
+    
+    .text {
+        display: none!important;
+    }
+}
+super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button.title-and-icon {
+    height: 48px;
+    padding-top: 8px;
+}
+super-tabs-toolbar > ion-toolbar.toolbar .tab-buttons-container .tab-buttons super-tab-button.title-and-icon ion-icon {
+    margin-top: 3px;
+}

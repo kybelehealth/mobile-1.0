@@ -1,0 +1,33 @@
+<ion-header mode="ios">
+    <ion-navbar transparent mode="ios">
+      <ion-title mode="ios">{{translation.lblHeader}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="logo">
+    <ion-icon name="calendar"></ion-icon>
+  </div>
+  <!-- [options]="options" -->
+  <ion-calendar [(ngModel)]="date"  [options]="options" (onChange)="onChange($event)"  type="string" format="YYYY-MM-DD"></ion-calendar>
+
+
+  <!-- <ion-list no-lines>
+      <ion-item (click)="openModal()">
+        <ion-icon name="md-remove-circle" color="danger"></ion-icon>
+        <h2>Çocuk 1 </h2>
+        <p>22.03.2019 Hepatit Aşısı Tarihi   </p>
+        <span class="distance">4g</span>
+      </ion-item>
+  
+      <ion-item (click)="openModal()">
+          <ion-icon name="md-checkmark-circle" color="primary"></ion-icon>
+          <h2>Çocuk 2 </h2>
+          <p>22.03.2019 Alerji Aşısı Tarihi   </p>
+          <span class="distance">20g</span>
+        </ion-item>
+
+    </ion-list> -->
+
+</ion-content>

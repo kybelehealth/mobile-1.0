@@ -1,0 +1,69 @@
+<ion-header mode="ios">
+    <ion-navbar mode="ios" transparent>
+    <button ion-button class="langIco" (click)="presentActionSheet()">
+      {{currentLanguage}}
+    </button>
+    
+    <ion-title mode="ios"></ion-title>
+    <ion-buttons end>
+      <button ion-button clear class="notificationIco" (click)="presentNotificationList()">
+      <ion-icon name="ios-mail"></ion-icon> <ion-badge *ngIf="unReadMessage>0" color="primary">{{unReadMessage}}</ion-badge>
+    </button>
+      <button ion-button clear class="logged-button" (click)="openMember()">
+        <ion-icon name="md-person"> 
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div class="logo">
+        <img src="assets/imgs/hera-logo.png">
+    </div>
+    
+    <ion-card class="menus">
+      <ion-row>
+          <ion-col class="menuButton nearby" (click)="nearby()">
+            <span><strong>{{translation.lblNearBy}}</strong></span>
+              <img src="assets/imgs/nearby.svg">
+          </ion-col>
+        </ion-row>
+      <ion-row>
+        <ion-col class="menuButton rightBorder bottomBorder" (click)="calendar()">
+          <span>{{translation.lblVaccinateCalendar.split(' ')[0]}}<br><strong>{{ translation.lblVaccinateCalendar.replace(translation.lblVaccinateCalendar.split(' ')[0],'')}}</strong></span>
+          <img src="assets/imgs/asi-takvimi.svg">
+        </ion-col>
+        <ion-col class="menuButton bottomBorder"  (click)="healthProfile()">
+          <span>{{translation.lblHealthProfile.split(' ')[0]}}<br><strong>{{translation.lblHealthProfile.replace(translation.lblHealthProfile.split(' ')[0],'')}}</strong></span>
+            <img src="assets/imgs/saglik-profilim.svg">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="menuButton rightBorder"  (click)="kayitlar()">
+          <span>{{translation.lblHealthRecord.split(' ')[0]}}<br><strong>{{translation.lblHealthRecord.replace(translation.lblHealthRecord.split(' ')[0],'')}}</strong></span>
+            <img src="assets/imgs/saglik-kayitlarim.svg">
+        </ion-col>
+        <ion-col class="menuButton"  (click)="bilgiler()">
+          <span>{{translation.lblHealthInfo.split(' ')[0]}}<br><strong>{{translation.lblHealthInfo.replace(translation.lblHealthInfo.split(' ')[0],'')}}</strong></span>
+            <img src="assets/imgs/saglik-bilgileri.svg">
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col class="menuButton emergency" (click)="emergency()">
+          <span><strong>{{translation.lblEmergency}}</strong></span>
+            <img src="assets/imgs/siren.svg">
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-row class="footer-logos">
+      <ion-col>
+        <img src="assets/imgs/gcc-logo.png" style="height: 40px;">
+      </ion-col>
+      <ion-col>
+        <img src="assets/imgs/medak-logo.png" style="height: 60px; float: right;">
+      </ion-col>
+    </ion-row>
+
+</ion-content>

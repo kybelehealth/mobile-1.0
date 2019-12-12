@@ -1,0 +1,20 @@
+<ion-header mode="ios">
+    <ion-navbar transparent mode="ios">
+      <ion-title mode="ios"></ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="logo">
+    <ion-icon name="flash"></ion-icon>
+  </div>
+  <h2>{{translation.lblTitle}}</h2>
+  <ion-row>
+    <ion-col>
+      <button ion-button color="secondary" class="callButton" block (click)="call()">
+          <ion-icon start name="call"></ion-icon>
+          {{translation.btnCall}}
+          <ion-icon end name="arrow-forward"></ion-icon>
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-content>

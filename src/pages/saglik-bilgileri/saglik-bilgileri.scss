@@ -1,0 +1,112 @@
+page-saglik-bilgileri {
+
+    .fixed-content {
+        background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 40%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        opacity: .45;
+        &:after {
+            content: "";
+            background-image: url(../assets/imgs/avatarbg2.svg);
+            background-repeat: no-repeat;
+            background-position: center -86px;
+            width: 100%!important;
+            height: 100%!important;
+            left: 0!important;
+            top: -40px!important;
+            position: absolute;
+            z-index: -1;
+            opacity: .55;
+        }
+    }
+    .scroll-content {
+
+    }
+
+    .toolbar[transparent] .toolbar-background {
+        border-color: transparent;
+        background: transparent;
+    }
+
+    ion-content {
+        background-color: #fff!important;
+    }
+
+
+
+    ion-list {
+        
+        list-style-type: none;
+
+        .item-block:first-child {
+            border-top: none!important;
+            border-radius: .5em .5em 0 0;
+        }
+
+
+        border-radius: .5em;
+        -webkit-box-shadow: 0 1px 32px -5px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 32px -5px rgba(0, 0, 0, 0.3);
+
+        .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+            border-bottom: none!important;
+            border-radius: 0 0 .5em .5em;
+        }
+    }
+
+ 
+    .item {
+        counter-increment: myIndex;
+ 
+        .number
+        {
+            font-size: 24px;
+            color: #eee;
+            float: left;
+            margin: 0 20px 10px 0;
+
+        }
+        h2 {
+            font-weight: 500;
+            color: #333 !important;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding-right: 20px;
+        }
+        p {
+        overflow: inherit;
+        font-size: 1.4rem;
+        line-height: 2rem;
+        text-overflow: inherit;
+        white-space: normal;
+        color: #8e9093;
+        margin: 0 48px 2px 0;
+        color: #3ca8bf !important;
+        }
+        .item-inner {
+            border-bottom: 0.55px solid #eeeeee!important;
+        }
+    }
+  
+    .item-ios h2 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 45px;
+    }
+
+    .item .item-inner {
+        background-image: url("data:image/svg+xml;charset=utf-8,<svg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2012%2020'><path%20d='M2,20l-2-2l8-8L0,2l2-2l10,10L2,20z'%20fill='%23c8c7cc'/></svg>");
+        padding-right: 32px;
+        background-repeat: no-repeat;
+        background-position: right 14px center;
+        background-size: 14px 14px;
+      }
+    ion-thumbnail img {
+        display: block;
+        width: 140px;
+        height: auto;
+    }
+  
+
+
+}
